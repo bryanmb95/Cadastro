@@ -17,5 +17,11 @@ function reply_click(clicked_id) {
         e.preventDefault();
     });
 
+    $('.topnav ul li a').click(function() {
+        $(".aditional").slideUp()
+        var target = '.' + $(this).data('target');
+        $(target).slideDown();
+    })
+
 
 }
