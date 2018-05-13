@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="cadastro.js"></script>
+
+    <title>Cadastro de Pessoas</title>
+
+    <h1 align="center">Cadastro de Pessoas</h1>
+
+</head>
+
+<body>
+
+    <h3>Este é um site de cadastro de pessoas.</h3>
+
+    <h4>Digite suas informações nos seus respectivos campos:</h4>
+
+    <form id="formulario">
+
+        <p><b>NOME:</b>
+            <input type="text" id="name" value=""></p>
+
+
+        <p><b>DATA DE NASCIMENTO:</b>
+            <input type="text" id="bornDate" value=""></p>
+
+
+        <p><b>CIDADE:</b>
+
+            <input type="text" id="city" value=""></p>
+
+        <p>
+            <input type="submit" id="cadastrar" value="Cadastrar" onClick="reply_click(this.id)">
+            <input type="submit" value="Exibir Pessoas">
+        </p>
+
+    </form>
+
+</body>
+
+
+</html>
