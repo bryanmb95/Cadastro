@@ -2,6 +2,12 @@
 <html>
 
 <head>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+            $("#includedContent").load("index2news.html");
+        });
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,7 +18,12 @@
     <script src="cadastro.js"></script>
 
     <style>
+        div.a {
+            text-align: justify;
+        }
+        
         body {
+            background-color: lightblue;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -63,27 +74,60 @@
 
     <h4>Digite suas informações nos seus respectivos campos:</h4>
 
-    <form id="formulario">
+    <div class="a">
+        <form id="formulario">
 
-        <p><b>NOME:</b>
-            <input type="text" id="name" value=""></p>
-
-
-        <p><b>DATA DE NASCIMENTO:</b>
-            <input type="text" id="bornDate" value=""></p>
+            <p><b>NOME:</b>
+                <input type="text" id="name" value=""></p>
 
 
-        <p><b>CIDADE:</b>
+            <p><b>DATA DE NASCIMENTO:</b>
+                <input type="text" id="bornDate" value=""></p>
 
-            <input type="text" id="city" value=""></p>
 
-        <p>
-            <input type="submit" id="cadastrar" value="Cadastrar" onClick="reply_click(this.id)">
-            <input type="submit" value="Exibir Pessoas">
-        </p>
+            <p><b>CIDADE:</b>
 
-        </div>
-    </form>
+                <input type="text" id="city" value=""></p>
+
+            <p>
+                <input type="submit" id="cadastrar" value="Cadastrar" onClick="reply_click(this.id)" style="background-color:#4CAF50">
+                <input type="submit" style="background-color:#4CAF50" value="Exibir Pessoas">
+            </p>
+
+
+        </form>
+
+        <b>NÚMERO DO RG </b><br>
+        <input type="text" name="numeroRg">
+
+        <form action="cpf.html" target="_blank">
+            <p><b>CPF:</b><br></p>
+            <input type="text" name="cpf">
+            <input type="submit" style="background-color:#4CAF50">
+        </form>
+    </div>
+
+    <b> SELECIONE SEU CONTINENTE:</b>
+    <select>
+    <option value = "americaDoSul">América do Sul</option>
+    <option value = "americaDoNorte">América do Norte</option>
+    <option value = "americaCentral">América Central</option>
+    <option value = "europa">Europa</option>
+    <option value = "asia">Asia</option>
+    <option value = "africa">África</option>
+    <option value = "oceania">Oceania</option>
+</select>
+
+    <button type="button" onClick="document.getElementById('date').innerHTML = Date()">Ver horário local</button>
+
+    <p id="date" style="color:#0101DF"></p>
+
+
+
+
+
+
+
 
 </body>
 

@@ -23,5 +23,12 @@ function reply_click(clicked_id) {
         $(target).slideDown();
     })
 
+    $('.navbar ul li a').click(function() {
+        $(".aditional").slideUp()
+        var target = $(this).attr('href');
+        $(target).slideDown();
+
+    })
+
 
 }
